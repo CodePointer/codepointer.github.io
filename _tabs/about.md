@@ -2,12 +2,76 @@
 # the default layout is 'page'
 icon: fas fa-info-circle
 order: 4
+media_subpath: /images/about/
 ---
 
-Hi, I'm Eric, and this is my personal blog, hope you like it!
+![Personal Photo](personal_photo.png){: .w-25 .right}
 
-I'm currently seeking an AI job in Australia. So I would like to place something about me in this page.
+Hello! I'm Rukun Qiao, and my friends also call me Eric. I'm an AI researcher and engineer with a deep passion for solving problems and building practical solutions. I am currenly based in Adelaide, where I live with my wife, but I'm open to work opportunities anywhere in Australia.
+
+I completed my undergraduate and Ph.D. studies at Peking University, where I focused on structured light for 3D scanning -- basically, developing a camera that provides depth. 
+
+That said, I'd like to introduce a different side of me here: I've always enjoyed the process of figuring things out -- identifying problems, defining requirements, and systematically exploring solutions, whether on my own or with a little help from others.
 
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
+# Networking & Infrastructure
+
+## Making Lab Life Easier
+
+When working in the lab, I quickly realized sharing files and code was far from seamless -- we were still transferring data using USB drives! 
+
+So, I decided to fix the problem. I applied a small grant, set up a NAS for centralized storage, deployed a Git server on it, and upgraded the lab's network with CAT6 cables to ensure the high-speed transfers. Now, everyone can transfer files at 100MB/s -- no more USB drives.
+
+## My Home Media System
+
+Inspired by the improvements in my lab, I wanted to optimize my home setup as well. I built a home NAS for media storage and streaming, enabling easy access to my video library from any devices. Whether watching on a laptop, TV or mobile phone, the Jellyfin system ensured a seamless experience for the whole family.
+
+To keep everything organized, I also combined AI-based visual classification (OpenCV library, for I don't have a strong GPU in that time) with manual tagging for our home videos, making it effortless to search for content.
+
+## Enhancing Internet Access & Network Security
+
+Well, there is some restrictions of our network in China, which can be a major limitation when working with global research, cloud services, or open-source projects. So, I put a lot of efforts in it. 
+
+At first, I configured my own VPS with advanced proxy services like Shadowsocks or v2ray, gaining some experiments in VPS setup and Linux system programming. Later, my parents also needed access to global resources, but I didn't want them to deal with the complexities of networking or proxy setups.
+
+So, I built a home routing system to improve usability. Using a secondary router, the OpenWrt system can automatically determines which traffic should be routed through my proxy, ensuring seamless browsing for them while keeping other devices (such as smart home devices) reliably connected. It was incredibly satisfying to see my parents using the internet freely and effortlessly.
+
+## Beating the VPN Struggles
+
+During the COVID, we weren't allowed on campus, but our lab's servers were still running, and we need to work with it. Unfortunately, the only way to connect was through the university's offical VPN, which was overloaded -- my VS Code lag was nearly 5 secs, making serious work impossible.
+
+Finally, during one of those tedious waits for VS Code to reconnect, I suddenly realized that while we couldn't directly access lab machines, they could still reach external resources. So, I built an internal network tunneling system by leveraging my home's IPv6 address for reverse proxy using FRP. At last, I had my own dedicated connection.
+
+I also wrote [two blog posts](https://codepointer.github.io/posts/ipv6-version-of-frp/) about it in case anyone have the similar requirements just like me.
+
+
+# Software Development & Automation
+
+## Game Modding
+
+![My game mod](succ_clan.png){: .w-50 .left}
+
+I am an computer engineer and a passionate gamer, so naturally, I ended up developing a mod when I got hooked on *Monster Train*, a roguelike deck-building game. I had tons of ideas and wanted to create my own mechanics, so I designed a new clan with unique gameplay mechanics and card designs, and published it on the Steam workshop -- [feel free to check it out if you're also into the game](https://steamcommunity.com/sharedfiles/filedetails/?id=2762086278).
+
+It was not an easy task. The game was built in Unity, and modding required reverse engineering with BepInEx. For me, I had never used C# before. So I started with the tutorials, studied existing mods, and joined the modding community on Discord for support. Thankfully, people there were really nice and helpful, and I managed to release my mod. It wasn't perfect, but seeing my ideas come to life was an incredible experience.
+
+> Updated Mar.4th, 2025: *Monster Train* is now available on Xbox game pass! If you enjoy *Slay the Spire*, give it a try!
 {: .prompt-tip }
+
+## Automating Schedule Checks with a Whatsapp Bot
+
+![Report of my robot](batminton.png){: .w-25 .right}
+<!-- _The report generated by the bot_ -->
+
+Some of my friends love playing badminton, but the gym schedule changes weekly, forcing them to check the website manually. To simplify things, I wrote a script to automatically fetch the latest schedule.
+
+I then integrated it into a WhatsApp bot, which sends the schedule to our group when tagged in the chat. I deployed it on Azure, gaining hands-on experience with cloud services. More importantly, my batminton friends were thrilled!
+
+## Bringing AI to WhatsApp
+Curious about AI applications, I started experimenting with OpenAI's API and integrating it into real-world workflows. Since I was already familiar with Whatsapp bots, I embedded ChatGPT into WhatsApp, allowing the bot to generate response with the power of a LLM (Large Language Model). Now, I can access ChatGPT directly from my Whatsapp chat.
+
+It was a simple idea, but I believe AI-powered assistants like this will become even more useful in the future.
+
+
+# Looking Ahead
+Technology is constantly evolving, and I love being part of that journey. If you're working on something interesting or looking for someone who enjoys solving complex problems, feel free to reach out!
