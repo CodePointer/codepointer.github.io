@@ -1,12 +1,16 @@
 #  The contact options.
 
+- type: portfolio
+  icon: "fas fa-briefcase"
+  url: "https://eric.my-page.top/"
+
 - type: github
   icon: "fab fa-github"
   url: "https://github.com/CodePointer/"
 
-- type: twitter
-  icon: "fa-brands fa-x-twitter"
-  url: "https://x.com/eric_rk_qiao/"
+# - type: twitter
+#   icon: "fa-brands fa-x-twitter"
+#   url: "https://x.com/eric_rk_qiao/"
 
 - type: email
   icon: "fas fa-envelope"
